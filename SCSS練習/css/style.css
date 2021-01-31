@@ -24,7 +24,7 @@ h2 {
 }
 
 .premium-nav {
-  width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -54,7 +54,7 @@ h2 {
 }
 
 .premium-plan {
-  width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -71,7 +71,9 @@ h2 {
 }
 
 .list-content {
+  list-style-type: none;
   margin-top: 30px;
+  padding: 10px;
   width: 23%;
   background: #fff;
   border: solid 1px #333;
@@ -79,8 +81,9 @@ h2 {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.detail strong {
-  font-size: 25px;
+.detail span {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .detail p {
@@ -100,15 +103,11 @@ h2 {
   color: white;
 }
 
-hr {
-  margin-top: 24px;
-  margin-bottom: 24px;
+.sep {
+  margin: 24px auto;
   border: 0;
   border-top: 1px solid #EFEFEF;
   width: 90%;
-}
-
-hr.sep {
   align-self: stretch;
   border-color: #cccccc;
 }
@@ -132,8 +131,8 @@ hr.sep {
   background: #333;
   border: none;
   text-decoration: none;
-  padding: 20px 50px;
-  margin: 50px;
+  padding: 15px 95px;
+  margin: 50px 0;
   border-radius: 40px;
   transition: ease;
 }
@@ -141,4 +140,14 @@ hr.sep {
 .btn button:hover {
   background-color: #534f4f;
   transform: scale(1.04);
+}
+
+p {
+  color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+  p {
+    color: #fff;
+  }
 }
