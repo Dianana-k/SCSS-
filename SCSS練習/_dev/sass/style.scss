@@ -46,8 +46,12 @@ h2{
     margin: 0 auto;
 }
 .premium-plan{
-   max-width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0;
 }
 .main-title{
     margin: 0 auto;
@@ -68,8 +72,14 @@ h2{
     border: solid 1px #333;
     border-radius: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    padding-bottom: 50px;
+    ul{
+        padding: 10px 10px 50px 10px;
+        margin: 0 auto;
+    }
 }
 .detail{
+    list-style-type: none;
    
     span{
         font-size: 30px;
@@ -80,7 +90,6 @@ h2{
         margin: 0 auto;
         font-size: 20px;
     }
-    
 }
 .detail-icon{
     border-radius: 4px;
@@ -88,7 +97,7 @@ h2{
     padding: 4px 8px;
     display: inline-block;
     font-weight: 900;
-    margin: 20px 0 10px 20px;
+    margin: 10px 0 10px 20px;
     background-color: rgb(46, 119, 208);
     color: rgb(255, 255, 255);
 }
@@ -111,7 +120,7 @@ h2{
 .btn{
     text-align: center;
 
-    button{
+    .button{
         color: #fff;
         font-size: 16px;
         background: #333;
