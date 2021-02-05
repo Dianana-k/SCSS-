@@ -1,0 +1,161 @@
+// --------------------------------------
+// mixin
+// --------------------------------------
+
+// clear
+// ---------------------------
+@mixin cf {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+
+// mediaQuery
+// ---------------------------
+$mqPc: 1180px;
+$mqTab: 980px;
+$mqSp: 768px;
+@mixin mq($device) {
+    @if $device == sp {
+        @media only screen and (max-width: $mqSp) {
+            @content;
+        }
+    } @else if $device == tab {
+        @media only screen and (max-width: $mqTab) {
+            @content;
+        }
+    } @else if $device == pc {
+        @media only screen and (max-width: $mqPc) {
+            @content;
+        }
+    } @else {
+        @media screen and (max-width: $device){
+            @content;
+      }
+  }
+}
+
+@include mq(tab){
+.premium-list{
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.icons{
+    width: 40%;
+    padding-bottom: 30px;
+    display: flex;
+    margin: 0 auto;
+}
+.icon{
+    margin: 20px;
+    width: auto;
+}
+.premium-plan{
+    max-width: 980px;
+    display: unset;
+    padding: 70px;
+}
+.list-content{
+    list-style-type: none;
+    padding: 10px;
+    width: 40%;
+    margin: 60px auto;
+    padding-bottom: 50px;
+}
+.btn{
+    .button{
+        padding: 15px 80px;
+    }
+}
+}
+@include mq(sp){
+    .premium-nav{
+        max-width:760px;
+        margin: 0 auto;
+    }
+    .premium-list{
+        display: unset;
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+}
+    .icons{
+        width: 90%;
+        padding-bottom: 30px;
+        display: flex;
+        margin: 0 auto;
+    
+        p{
+            text-align: left;
+            line-height: normal;
+        }
+        strong{
+            font-size: 25px;
+            line-height: normal;
+        }
+    }
+    .icon{
+        margin: 30px 40px;
+        max-width: 100px;
+        height: 100%;
+    }
+    .premium-plan{
+        max-width: 768px;
+        margin: 0 auto;
+        display: unset;
+        margin: 0 auto;
+        padding: 70px;
+    }
+    .list-content{
+        list-style-type: none;
+        padding: 10px;
+        width: 60%;
+        margin: 60px auto;
+        padding-bottom: 50px;
+    }
+    .btn{
+        .button{
+            padding: 15px 50px;
+        }
+    }
+}
+
+// hover
+// ---------------------------
+@mixin hover {
+    &:hover, &:focus {
+        @content;
+    }
+}
+
+// pseudo
+// ---------------------------
+@mixin pseudo{
+    content: "";
+    display:block;
+    position:absolute;
+}
+
+// arrow
+// ---------------------------
+@mixin arrow($color, $length:8px, $rotate:45deg, $left:auto, $right:8px, $top: 0, $bottom: 0, $weight: 2px, $margin: auto) {
+    color: $color;
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    display: block;
+    content: '';
+    width: $length;
+    height: $length;
+    margin: auto;
+    border-top: $weight solid $color;
+    border-right: $weight solid $color;
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
