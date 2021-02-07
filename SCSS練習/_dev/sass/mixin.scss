@@ -39,43 +39,50 @@ $mqSp: 768px;
 }
 
 @include mq(tab){
-.premium-list{
-    max-width: 800px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.icons{
-    width: 40%;
-    padding-bottom: 30px;
-    display: flex;
-    margin: 0 auto;
-}
-.icon{
-    margin: 20px;
-    width: auto;
-}
-.premium-plan{
-    max-width: 980px;
-    display: unset;
-    padding: 70px;
-}
-.list-content{
-    list-style-type: none;
-    padding: 10px;
-    width: 40%;
-    margin: 60px auto;
-    padding-bottom: 50px;
-}
-.btn{
-    .button{
-        padding: 15px 80px;
+    .premium-nav{
+        max-width:980px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .premium-list{
+        max-width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .icons{
+        width: 40%;
+        padding-bottom: 30px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .icon{
+        margin: 30px 10px;
+    }
+    .premium-plan{
+        max-width: 980px;
+        display: unset;
+        padding: 70px;
+    }
+    .list-content{
+        list-style-type: none;
+        padding: 10px;
+        width: 40%;
+        margin: 60px auto;
+        padding-bottom: 50px;
+    }
+    .btn{
+        .button{
+            padding: 15px 80px;
+        }
     }
 }
-}
 @include mq(sp){
+    div{
+        padding: 0 20px;
+    }
     .premium-nav{
         max-width:760px;
-        margin: 0 auto;
+        padding: 0;
     }
     .premium-list{
         display: unset;
@@ -99,7 +106,7 @@ $mqSp: 768px;
         }
     }
     .icon{
-        margin: 30px 40px;
+        margin: 30px 10px;
         max-width: 100px;
         height: 100%;
     }
@@ -113,13 +120,13 @@ $mqSp: 768px;
     .list-content{
         list-style-type: none;
         padding: 10px;
-        width: 60%;
+        width: 100%;
         margin: 60px auto;
         padding-bottom: 50px;
     }
     .btn{
         .button{
-            padding: 15px 50px;
+            padding: 18px 90px;
         }
     }
 }
